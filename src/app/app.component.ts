@@ -8,8 +8,15 @@ import { Component, Output } from '@angular/core';
 export class AppComponent {
   title = 'tasklistclient';
   @Output() isComponentAppUser = true;
+  @Output() isComponentAppTask = false;
 
-  setDisplay(newItem: boolean) {
-    this.isComponentAppUser = !this.isComponentAppUser;
+  setDisplayUserComp(newItem: boolean) {
+    this.isComponentAppUser = true;
+    this.isComponentAppTask = false;
+  }
+  
+  setDisplayTaskComp(newItem: boolean) {
+    this.isComponentAppUser = false;
+    this.isComponentAppTask = true;
   }
 }

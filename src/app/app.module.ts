@@ -7,15 +7,17 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { UserService } from './user.service';
 import { NavbarComponent } from './navbar/navbar.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SitebodyComponent } from './sitebody/sitebody.component';
+import { TaskComponent } from './task/task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     NavbarComponent,
-    SitebodyComponent
+    SitebodyComponent,
+    TaskComponent
   ],
   imports: [
     BrowserModule,

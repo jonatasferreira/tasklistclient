@@ -1,5 +1,9 @@
-<app-navbar (isDisplayComponentAppUser)="setDisplay($event)"></app-navbar>
+<app-navbar 
+(isDisplayComponentAppUser)="setDisplayUserComp($event)"
+(isDisplayComponentAppTask)="setDisplayTaskComp($event)"
+></app-navbar>
 
 <app-sitebody 
 [isComponentAppUser]="isComponentAppUser"
+[isComponentAppTask]="isComponentAppTask"
 ></app-sitebody>

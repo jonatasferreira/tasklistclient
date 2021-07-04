@@ -26,4 +26,8 @@ export class NavbarComponent implements OnInit {
   setDisplayComponentAppUser() {
     this.isDisplayComponentAppUser.emit(true);
   }
+
+  setDisplayComponentAppTask() {
+    this.isDisplayComponentAppTask.emit(true);
+  }
 }

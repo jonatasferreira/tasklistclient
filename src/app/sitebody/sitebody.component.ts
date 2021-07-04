@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SitebodyComponent implements OnInit {
   @Input() isComponentAppUser = true;
+  @Input() isComponentAppTask = false;
 
   constructor() { }
 
