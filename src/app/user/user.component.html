@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="form-group col-md-12">
+
+    <h2>Usuários</h2>
+
+    <table class="table table-bordered">
+        <tr>
+            <td>id</td>
+            <td>Nome</td>
+            <td>Email</td>
+        </tr>
+        <tr *ngFor="let user of users">
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+        </tr>
+    </table>
+
+    </div>
+</div>
