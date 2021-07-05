@@ -16,8 +16,14 @@ export class UserService {
   }
 
   insert(user: UserModel): Observable<any> {
-    const headers = new HttpHeaders()
-      .set('Host', '');
-    return this.http.post("http://127.0.0.1:8000/user", user, { 'headers': headers });
+    return this.http.post("http://127.0.0.1:8000/user", user);
+  }
+
+  update(id: any, user: UserModel): Observable<any> {
+    return this.http.put("http://127.0.0.1:8000/user/".concat(id), user);
+  }
+
+  delete(id: any) {
+    return this.http.delete("http://127.0.0.1:8000/user/".concat(id));
   }
 }

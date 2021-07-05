@@ -36,10 +36,20 @@ export class UserComponent implements OnInit {
   }
 
   update(id: number) {
-    
+    this.userSevice.update(id, this.user).subscribe(user => {
+      this.user = new UserModel();
+      this.userList();
+    }, err => {
+      console.log('erro ao atualizar usuário', err);
+    });
   }
 
   delete(id: number) {
-
+    this.userSevice.delete(id).subscribe(user => {
+      this.user = new UserModel();
+      this.userList();
+    }, err => {
+      console.log('erro ao deletar usuário', err);
+    });
   }
 }
